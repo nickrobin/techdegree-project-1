@@ -88,7 +88,7 @@ function printQuote() {
 }
 
  // extra credit: initalizate timer to change quote after 5 seconds
- var quoteTimer = window.setInterval(printQuote, 5000);
+ var quoteTimer = window.setInterval(printQuote, 2000);
 
 //onclick listener for the loadQuote button
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
