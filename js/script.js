@@ -70,6 +70,7 @@ function printQuote() {
     if ('year' in quote){
       htmlString = htmlString + '<span class="year">' + quote.year + '</span>';
     }
+    //extra credit: include an additional field here for category of bar 
     if ('category' in quote){
     htmlString = htmlString + '<br><span class="category"> Lyric Type:' + quote.category + '</span>';
     }
@@ -79,16 +80,14 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = htmlString;
 
   /** extra credit: change the background color on new quote generation
-  I could have just used some snip i found on stackoverflow to generate a hex
-  but I figured this was just as easy to change to an rgb value
-   **/
+  randomly create rgb(x,x,x) field **/
   var rgb_value = "rgb(" + Math.floor(Math.random() * 250) + "," + Math.floor(Math.random() * 250) + "," + Math.floor(Math.random() * 250) + ")";
   document.body.style.background = rgb_value;
 
 }
 
  // extra credit: initalizate timer to change quote after 5 seconds
- var quoteTimer = window.setInterval(printQuote, 2000);
+ var quoteTimer = window.setInterval(printQuote, 5000);
 
 //onclick listener for the loadQuote button
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
