@@ -4,4 +4,5 @@ Treehouse Tech Degree - Project 1: Show a new quote on the page each time the us
 
 ## Preview
 
-Preview (http://www.giphy.com/gifs/wIl1v110wh6lk4BeZ2)
+Preview 
+![alt text](http://www.giphy.com/gifs/wIl1v110wh6lk4BeZ2)
