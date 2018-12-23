@@ -70,7 +70,7 @@ function printQuote() {
     if ('year' in quote){
       htmlString = htmlString + '<span class="year">' + quote.year + '</span>';
     }
-    //extra credit: include an additional field here for category of bar 
+    //extra credit: include an additional field here for category of bar
     if ('category' in quote){
     htmlString = htmlString + '<br><span class="category"> Lyric Type:' + quote.category + '</span>';
     }
@@ -81,7 +81,7 @@ function printQuote() {
 
   /** extra credit: change the background color on new quote generation
   randomly create rgb(x,x,x) field **/
-  var rgb_value = "rgb(" + Math.floor(Math.random() * 250) + "," + Math.floor(Math.random() * 250) + "," + Math.floor(Math.random() * 250) + ")";
+  var rgb_value = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
   document.body.style.background = rgb_value;
 
 }
