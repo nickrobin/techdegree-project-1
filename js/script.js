@@ -48,11 +48,21 @@ category: "Flexing 💪"
 Checks the length of quote array and generates a number between 0 and the max length of array
 RETURNS single instance of quote
 ***/
-function getRandomQuote(){
+const getRandomQuote = () => {
   var upper = quotes.length
   var random = Math.floor(Math.random() * upper);
   console.log(random);
   return quotes[random];
+}
+
+const getRandomRgb = () =>
+{
+  let rgbArray = [];
+  for (let i = 0; i < 3; i++)
+  {
+    rgbArray.push(Math.floor(Math.random() * 256));
+  }
+  return randomRgb = "rgb("+rgbArray.join(', ')+")";
 }
 
 
@@ -61,7 +71,7 @@ Get a random quote from our array of rap quotes and construct a htmlString using
 Condition logic to check if there is extra fields such as citation, year, or category in the object
 Update the quote-box div and change background color
 **/
-function printQuote() {
+const printQuote = () => {
   var quote = getRandomQuote();
   var htmlString = '<p class="quote">' + quote.quote + '</p><p class="source">' + quote.source;
     if ('citation' in quote){
@@ -81,8 +91,10 @@ function printQuote() {
 
   /** extra credit: change the background color on new quote generation
   randomly create rgb(x,x,x) field **/
-  var rgb_value = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + ")";
+
+  let rgb_value = getRandomRgb();  
   document.body.style.background = rgb_value;
+  document.getElementById('loadQuote').style.backgroundColor = rgb_value;
 
 }
 
